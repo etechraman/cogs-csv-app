@@ -1,7 +1,7 @@
 <template>
   <v-navigation-drawer absolute permanent left>
     <v-list dense>
-      <v-list-item-group color="blue" @click="itemGroupClick()">
+      <v-list-item-group color="blue">
         <v-list-item class="tile" @click="download()">
           <v-list-item-content>Download CSV</v-list-item-content>
         </v-list-item>
@@ -25,9 +25,6 @@ export default {
     upload() {
       this.$router.push("/upload");
     },
-    itemGroupClick() {
-      console.log(event);
-    },
   },
 };
 </script>
@@ -36,10 +33,6 @@ export default {
   background: lightskyblue;
 }
 .v-list-item--link:before {
-background-color: blue;
+  background-color: blue;
 }
-
-/* .tile:active {
-  background: yellow;
-} */
 </style>

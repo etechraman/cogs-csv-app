@@ -7,7 +7,6 @@
         </h2>
       </v-col>
     </v-row>
-    <!-- <v-divider></v-divider> -->
     <v-row
       ><v-col>
         <v-btn color="blue" class="white--text" @click="upload()">
@@ -39,7 +38,6 @@
               :key="index"
             >
               <v-list-item-avatar>
-                <!-- <v-icon>mdi-clock</v-icon> -->
                 <v-img lazy-src="../assets/download.png" width="150px"></v-img>
               </v-list-item-avatar>
 
@@ -88,7 +86,6 @@
               :key="index"
             >
               <v-list-item-avatar>
-                <!-- <v-icon>mdi-clock</v-icon> -->
                 <v-img lazy-src="../assets/download.png"></v-img>
               </v-list-item-avatar>
 
@@ -167,22 +164,15 @@ export default {
           let cogs = "";
 
           if (element === item) {
-            // console.log(element.id,"ID::::::::::::;");
-            // console.log(index, element);
             cogs = this.enterCogs[index];
-            // console.log(cogs);
             element.cogs = cogs;
             this.enterCogs[index] = "";
-            // console.log(element, ">>>>>>>>>>");
           }
         });
         this.generateEmptyAndNoEmptyCogs(this.displayJsonData);
-        console.log(this.mockJson);
       } else {
         alert("Cannot send empty value!! Sorry");
       }
-      console.log(this.displayJsonData);
-      // item.cogs = this.enterCogs;
     },
     generateEmptyAndNoEmptyCogs(val) {
       this.$store.commit("clearMockJson");
@@ -190,7 +180,6 @@ export default {
       this.emptyCogs = [];
       this.nonEmptyCogs = [];
       val.forEach((item) => {
-        // console.log(item);
         if (item.cogs) {
           this.nonEmptyCogs.push(item);
         } else if (item.cogs === "") this.emptyCogs.push(item);

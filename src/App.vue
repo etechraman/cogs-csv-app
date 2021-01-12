@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <v-app-bar app color="black" dark class="px-16">
-      <!-- <v-spacer></v-spacer> -->
       <div class="d-flex align-center px-16 mx-16 grey--text">
         Cogs Manager
       </div>
