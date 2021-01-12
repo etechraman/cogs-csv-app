@@ -1,17 +1,18 @@
 <template>
   <v-app>
-    <v-app-bar app color="black" dark>
-      <div class="d-flex align-center">
-        <span>Cogs Manager</span>
+    <v-app-bar app color="black" dark class="px-16">
+      <!-- <v-spacer></v-spacer> -->
+      <div class="d-flex align-center px-16 mx-16 grey--text">
+        Cogs Manager
       </div>
     </v-app-bar>
 
     <v-main>
       <v-row>
-        <v-col cols="3">
+        <v-col cols="2">
           <side-bar />
         </v-col>
-        <v-col cols="9"><router-view /></v-col>
+        <v-col cols="10"><router-view /></v-col>
       </v-row>
     </v-main>
   </v-app>
